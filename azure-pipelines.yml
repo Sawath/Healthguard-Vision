@@ -1,0 +1,59 @@
+trigger:
+  branches:
+    include:
+      - main
+
+pool:
+  vmImage: "ubuntu-latest"
+
+variables:
+  pythonVersion: "3.11"
+
+stages:
+
+# =========================
+# STAGE 1 — TEST API
+# =========================
+- stage: Test_API
+  displayName: "Test Flask API"
+  jobs:
+    - job: pytest
+      steps:
+        - checkout: self
+
+        - task: UsePythonVersion@0
+          inputs:
+            versionSpec: "$(pythonVersion)"
+
+        - script: |
+            python -m pip install --upgrade pip
+            pip install -r api/requirements.txt
+            pip install pytest
+          displayName: "Install dependencies"
+
+        - script: |
+            pytest api/tests
+          displayName: "Run API tests"
+
+# =========================
+# STAGE 2 — BUILD DOCKER
+# =========================
+- stage: Build_Docker
+  displayName: "Build Docker Image"
+  dependsOn: Test_API
+  condition: succeeded()
+
+  jobs:
+    - job: docker_build
+      steps:
+        - checkout: self
+
+        - task: Docker@2
+          displayName: "Build API image"
+          inputs:
+            command: build
+            dockerfile: api/Dockerfile
+            buildContext: .
+            repository: healthguard-api
+            tags: |
+              latest
