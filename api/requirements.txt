@@ -4,5 +4,8 @@ gunicorn
 pymongo
 pydantic
 pillow
+pytest==8.2.2
+pytest-cov==5.0.0
+requests==2.32.3
 numpy<2
 tflite-runtime==2.14.0
