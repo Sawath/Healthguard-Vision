@@ -99,24 +99,20 @@ GET /v1/analyses/{patient_id}
 
 ## 📂 Project Structure
 
+```text
 healthguard-vision/
-│
 ├── api/
 │   ├── routes/
 │   ├── models/
 │   ├── tests/
 │   ├── Dockerfile
 │   └── app.py
-│
 ├── ml/
 │   ├── train_multitask.py
-│   ├── export_tflite.py
-│
+│   └── export_tflite.py
 ├── mobile/
-│
 ├── infra/
 │   └── docker-compose.yml
-│
 └── .github/workflows/
 
 ---
