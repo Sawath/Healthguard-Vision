@@ -2,24 +2,24 @@
 # 🚀 HealthGuard Vision — AI Preventive Screening Platform
 
 ## 📌 Overview
-HealthGuard Vision is an AI-powered preventive health screening system that analyzes smartphone images to estimate early health risks.
+HealthGuard Vision est un système de dépistage préventif basé sur l'intelligence artificielle qui analyse les images prises avec un smartphone afin d'évaluer les risques précoces pour la santé.
 
-The application analyzes:
-- Eyes
-- Skin
-- Nails
+L'application analyse :
+- Les yeux
+- La peau
+- Les ongles
 
-Estimated risks:
-- Anemia
-- Diabetes
-- Nutritional deficiencies
+Risques estimés :
+- Anémie
+- Diabète
+- Carences nutritionnelles
 
-⚠️ This application is a screening tool only and is NOT a medical diagnosis system.
+⚠️ Cette application est uniquement un outil de dépistage et n'est PAS un système de diagnostic médical.
 
 ---
 
 ## 🧠 Concept
-The goal is to democratize early health awareness by allowing users to perform preliminary screenings directly from their smartphone using AI.
+L'objectif est de démocratiser la sensibilisation précoce à la santé en permettant aux utilisateurs d'effectuer des dépistages préliminaires directement depuis leur smartphone à l'aide de l'IA.
 
 ---
 
@@ -29,7 +29,7 @@ Mobile App (React Native)
         ↓
 REST API (Flask + Gunicorn)
         ↓
-ML Engine (TensorFlow Lite)
+Moteur ML (TensorFlow Lite)
         ↓
 MongoDB Database
 
@@ -54,18 +54,18 @@ MongoDB Database
 - Docker
 - GitHub Actions
 - CI/CD pipelines
-- Containerized services
+- Services conteneurisés
 
 ---
 
 ## 🤖 Machine Learning Pipeline
 
-1. Dataset preparation
-2. Transfer learning (MobileNet)
-3. Fine‑tuning
-4. SavedModel export
+1. Préparation du jeu de données
+2. Transfert d'apprentissage (MobileNet)
+3. Réglage fin
+4. Exportation du modèle enregistré
 5. Conversion → TensorFlow Lite
-6. API integration
+6. Intégration de l'API
 
 ---
 
@@ -80,20 +80,20 @@ POST /v1/analyze
 Form-data:
 - image
 - patient_id
-- modality (eye | skin | nail)
+- modality (œil | peau | ongle)
 
-### History
+### Histoire
 GET /v1/analyses/{patient_id}
 
 ---
 
-## 🔐 Privacy & Compliance
+## 🔐 Confidentialité et conformité
 
-- Patient consent required
-- Secure storage
-- Analysis logs saved
-- No diagnosis generated
-- Designed for HIPAA‑compatible deployment
+- Consentement du patient requis
+- Stockage sécurisé
+- Journaux d'analyse enregistrés
+- Aucun diagnostic généré
+- Conçu pour un déploiement compatible HIPAA
 
 ---
 
@@ -119,54 +119,54 @@ healthguard-vision/
 
 ## 🧪 Automated Testing
 
-CI pipeline runs:
-- API tests
-- Validation tests
-- Dependency checks
+Le pipeline CI exécute :
+- Tests API
+- Tests de validation
+- Vérifications des dépendances
 
 ---
 
-## 🚀 Deployment Strategy
+## 🚀 Stratégie de déploiement
 
-Production‑ready design supports:
-- Container registry
-- Cloud deployment
-- Blue‑Green deployments
-- Monitoring integration
+La conception prête pour la production prend en charge :
+- Le registre de conteneurs
+- Le déploiement dans le cloud
+- Les déploiements bleu-vert
+- L'intégration de la surveillance
 
 ---
 
-## 📊 DevOps Principles Applied
+## 📊 Principes DevOps appliqués
 
-- Automation
-- Continuous Delivery
+- Automatisation
+- Livraison continue
 - Collaboration
-- Monitoring readiness
+- Surveillance de l'état de préparation
 
 ---
 
-## 📱 Mobile Features
+## 📱 Fonctionnalités mobiles
 
-- Camera capture
-- Gallery upload
-- Image preview
-- Risk level results
-- Medical recommendations
-- Consent system
-
----
-
-## ⚠️ Medical Disclaimer
-
-HealthGuard Vision does NOT provide medical diagnosis.  
-Always consult a healthcare professional.
+- Capture photo
+- Téléchargement dans la galerie
+- Aperçu des images
+- Résultats du niveau de risque
+- Recommandations médicales
+- Système de consentement
 
 ---
 
-## 🎓 Academic Context
-Project developed as part of an Agile & DevOps engineering program.
+## ⚠️ Avertissement médical
+
+HealthGuard Vision ne fournit PAS de diagnostic médical.  
+Consultez toujours un professionnel de santé.
 
 ---
 
-## 👨‍💻 Author
+## 🎓 Contexte académique
+Projet développé dans le cadre d'un programme d'ingénierie Agile & DevOps.
+
+---
+
+## 👨‍💻 Auteur
 VITALSCAN GROUP
